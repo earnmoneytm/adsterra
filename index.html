@@ -14,6 +14,7 @@
             margin: 20px 0;
             overflow: hidden; /* Evitar que sobresalga */
             height: 90px; /* Fijar la altura del banner */
+            max-width: 100%; /* Limitar el ancho del banner al 100% del contenedor */
         }
 
         .ad-banner iframe {
@@ -38,7 +39,7 @@
 
     <div class="container text-center mt-5">
         <!-- Banner de cabecera (728x90) -->
-        <div class="ad-banner">
+        <div class="ad-banner mx-auto">
             <script type="text/javascript">
                 atOptions = {
                     'key': '899118a1abd6c6593737523f98d23894',
@@ -66,19 +67,19 @@
         </div>
 
         <!-- Banner de contenido (336x280) -->
-        <div class="ad-banner">
+        <div class="ad-banner mx-auto">
             <p>Content Banner (336x280)</p>
             <!-- Inserta el código del banner aquí -->
         </div>
 
         <!-- Banner grande para móviles (320x100) -->
-        <div class="ad-banner">
+        <div class="ad-banner mx-auto">
             <p>Mobile Large Banner (320x100)</p>
             <!-- Inserta el código del banner aquí -->
         </div>
 
         <!-- Banner inferior o pie de página (728x90) -->
-        <div class="ad-banner">
+        <div class="ad-banner mx-auto">
             <p>Footer Banner (728x90)</p>
             <!-- Inserta el código del banner aquí -->
         </div>
@@ -141,4 +142,5 @@
 </body>
 
 </html>
+
 
