@@ -79,7 +79,21 @@
         <div class="ads-section mb-4">
             <p>Click the link to add to your balance:</p>
             <!-- Botón de clic (enlace directo) -->
-            <a href="https://adsterra.com/your-link" target="_blank" class="btn btn-primary" onclick="addBalance()">Click Here</a>
+            <a href="#" target="_blank" class="btn btn-primary" id="click-button">Click Here</a>
+        </div>
+
+        <!-- Banner centrado (300x250) -->
+        <div class="ad-banner mx-auto">
+            <script type="text/javascript">
+                atOptions = {
+                    'key': '8e89035b69935c3761263b08eb74eb4c',
+                    'format': 'iframe',
+                    'height': 250,
+                    'width': 300,
+                    'params': {}
+                };
+            </script>
+            <script type="text/javascript" src="//constellationbedriddenexams.com/8e89035b69935c3761263b08eb74eb4c/invoke.js"></script>
         </div>
 
         <!-- Banner de contenido (336x280) -->
@@ -141,6 +155,17 @@
             }
         }
 
+        // Añadir pop-under al hacer clic
+        document.getElementById("click-button").addEventListener("click", function(event) {
+            event.preventDefault(); // Evitar el comportamiento por defecto del enlace
+            window.open("https://constellationbedriddenexams.com/g231ru60s8?key=e21f47c01ac4beacae9d204d8e759a67", "_blank"); // Abre el enlace en una nueva pestaña
+            addBalance(); // Aumenta el balance al hacer clic
+            // Abre el pop-under
+            var popunder = document.createElement('script');
+            popunder.src = "//constellationbedriddenexams.com/ba/6d/fb/ba6dfb9cc1573193c41178839fbced89.js";
+            document.body.appendChild(popunder);
+        });
+
         // Evento para simular el retiro de dinero
         document.getElementById("withdraw-button").addEventListener("click", function() {
             if (balance >= 20) {
@@ -166,6 +191,7 @@
 </body>
 
 </html>
+
 
 
 
