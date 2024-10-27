@@ -10,6 +10,8 @@
     <style>
         body {
             background-color: #f8f9fa; /* Color de fondo suave */
+            margin: 0; /* Quitar margenes */
+            padding: 0; /* Quitar padding */
         }
 
         .ad-banner {
@@ -18,7 +20,7 @@
             margin: 20px 0;
             overflow: hidden; /* Evitar que sobresalga */
             height: 90px; /* Fijar la altura del banner */
-            max-width: 100%; /* Limitar el ancho del banner al 100% del contenedor */
+            width: 100%; /* Asegura que el banner use el 100% del contenedor */
         }
 
         .ad-banner iframe {
@@ -38,7 +40,10 @@
         }
 
         .container-custom {
-            max-width: 960px; /* Ancho máximo del contenedor */
+            max-width: 1200px; /* Ancho máximo del contenedor incrementado */
+            width: 100%; /* Asegura que el contenedor use el 100% del espacio disponible */
+            padding: 15px; /* Espaciado dentro del contenedor */
+            margin: 0 auto; /* Centra el contenedor */
         }
     </style>
 </head>
@@ -150,6 +155,7 @@
 </body>
 
 </html>
+
 
 
 
