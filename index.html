@@ -1,51 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Earn Money Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Basic reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            padding: 20px;
-        }
-
-        .container {
-            text-align: center;
-            background-color: #fff;
-            padding: 40px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        .ad-banner {
+            background-color: #f1f1f1;
             border-radius: 8px;
-            max-width: 600px;
-            margin: 20px;
+            margin: 20px 0;
+            overflow: hidden; /* Evitar que sobresalga */
+            height: 90px; /* Fijar la altura del banner */
+        }
+
+        .ad-banner iframe {
+            width: 100%; /* Ajustar el iframe al 100% del contenedor */
+            height: 100%; /* Ajustar la altura del iframe al 100% del contenedor */
+            border: none; /* Quitar bordes */
         }
 
         h1 {
-            font-size: 24px;
             margin-bottom: 20px;
-        }
-
-        .balance-section {
-            margin-bottom: 20px;
-        }
-
-        #balance {
-            font-weight: bold;
-            color: #4CAF50;
-            font-size: 24px;
         }
 
         .min-withdraw {
@@ -53,142 +31,114 @@
             color: #888;
             margin-top: 10px;
         }
-
-        .ad-link, #withdraw-button {
-            display: inline-block;
-            padding: 12px 24px;
-            font-size: 16px;
-            text-decoration: none;
-            color: #fff;
-            border-radius: 4px;
-        }
-
-        .ad-link {
-            background-color: #007BFF;
-        }
-
-        #withdraw-button {
-            background-color: #4CAF50;
-            cursor: pointer;
-        }
-
-        .ad-link:hover, #withdraw-button:hover {
-            opacity: 0.9;
-        }
-
-        .ad-banner {
-            margin: 20px 0;
-            text-align: center;
-            background-color: #f1f1f1;
-            padding: 10px;
-            border-radius: 8px;
-        }
     </style>
 </head>
+
 <body>
 
-<div class="container">
+    <div class="container text-center mt-5">
+        <!-- Banner de cabecera (728x90) -->
+        <div class="ad-banner">
+            <script type="text/javascript">
+                atOptions = {
+                    'key': '899118a1abd6c6593737523f98d23894',
+                    'format': 'iframe',
+                    'height': 90,
+                    'width': 728,
+                    'params': {}
+                };
+            </script>
+            <script type="text/javascript" src="//constellationbedriddenexams.com/899118a1abd6c6593737523f98d23894/invoke.js"></script>
+        </div>
+
+        <h1>Earn Money by Clicking Links!</h1>
+
+        <div class="balance-section mb-4">
+            <p>Accumulated Balance: <span id="balance">0.00</span> USD</p>
+            <button id="withdraw-button" class="btn btn-success" disabled>Withdraw</button>
+            <p class="min-withdraw">Minimum withdrawal is $20 USD</p>
+        </div>
+
+        <div class="ads-section mb-4">
+            <p>Click the link to add to your balance:</p>
+            <!-- Botón de clic (enlace directo) -->
+            <a href="https://adsterra.com/your-link" target="_blank" class="btn btn-primary" onclick="addBalance()">Click Here</a>
+        </div>
+
+        <!-- Banner de contenido (336x280) -->
+        <div class="ad-banner">
+            <p>Content Banner (336x280)</p>
+            <!-- Inserta el código del banner aquí -->
+        </div>
+
+        <!-- Banner grande para móviles (320x100) -->
+        <div class="ad-banner">
+            <p>Mobile Large Banner (320x100)</p>
+            <!-- Inserta el código del banner aquí -->
+        </div>
+
+        <!-- Banner inferior o pie de página (728x90) -->
+        <div class="ad-banner">
+            <p>Footer Banner (728x90)</p>
+            <!-- Inserta el código del banner aquí -->
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     
-    <!-- Banner de cabecera (728x90) -->
-    <div class="ad-banner">
-        <!-- Código del banner de cabecera -->
-        <script type="text/javascript">
-            atOptions = {
-                'key' : '899118a1abd6c6593737523f98d23894',
-                'format' : 'iframe',
-                'height' : 90,
-                'width' : 728,
-                'params' : {}
-            };
-        </script>
-        <script type="text/javascript" src="//constellationbedriddenexams.com/899118a1abd6c6593737523f98d23894/invoke.js"></script>
-    </div>
-
-    <h1>Earn Money by Clicking Links!</h1>
-    
-    <div class="balance-section">
-        <p>Accumulated Balance: <span id="balance">0.00</span> USD</p>
-        <button id="withdraw-button" disabled>Withdraw</button>
-        <p class="min-withdraw">Minimum withdrawal is $20 USD</p>
-    </div>
-
-    <div class="ads-section">
-        <p>Click the link to add to your balance:</p>
-        
-        <!-- Botón de clic (enlace directo) -->
-        <a href="https://adsterra.com/your-link" target="_blank" class="ad-link" onclick="addBalance()">Click Here</a>
-    </div>
-
-    <!-- Banner de contenido (336x280) dentro del contenido -->
-    <div class="ad-banner">
-        <p>Content Banner (336x280)</p>
-        <!-- Inserta el código del banner aquí -->
-    </div>
-
-    <!-- Banner grande para móviles (320x100) -->
-    <div class="ad-banner">
-        <p>Mobile Large Banner (320x100)</p>
-        <!-- Inserta el código del banner aquí -->
-    </div>
-
-    <!-- Banner inferior o pie de página (728x90) -->
-    <div class="ad-banner">
-        <p>Footer Banner (728x90)</p>
-        <!-- Inserta el código del banner aquí -->
-    </div>
-
-</div>
-
-<script>
-    // Función para inicializar el balance desde localStorage o establecerlo en 0 si no existe
-    function initializeBalance() {
-        let storedBalance = localStorage.getItem("balance");
-        if (storedBalance) {
-            balance = parseFloat(storedBalance);
-        } else {
-            balance = 0.00;
-            localStorage.setItem("balance", balance.toFixed(2));
-        }
-        document.getElementById("balance").innerText = balance.toFixed(2);
-    }
-
-    // Llama a esta función cuando el usuario haga clic en el enlace de Adsterra
-    function addBalance() {
-        balance += 0.05; // Incrementa el saldo por clic, puedes cambiar el valor
-        document.getElementById("balance").innerText = balance.toFixed(2);
-
-        // Actualiza el saldo en localStorage
-        localStorage.setItem("balance", balance.toFixed(2));
-
-        // Habilita el botón de retiro si el saldo es mayor o igual a $20
-        if (balance >= 20) {
-            document.getElementById("withdraw-button").disabled = false;
-            document.getElementById("withdraw-button").innerText = "Withdraw";
-        }
-    }
-
-    // Evento para simular el retiro de dinero
-    document.getElementById("withdraw-button").addEventListener("click", function() {
-        if (balance >= 20) {
-            alert("Withdrawal successful. Balance has been reset.");
-            
-            // Reinicia el saldo en 0 y lo actualiza en localStorage
-            balance = 0.00;
+    <script>
+        // Función para inicializar el balance desde localStorage o establecerlo en 0 si no existe
+        function initializeBalance() {
+            let storedBalance = localStorage.getItem("balance");
+            if (storedBalance) {
+                balance = parseFloat(storedBalance);
+            } else {
+                balance = 0.00;
+                localStorage.setItem("balance", balance.toFixed(2));
+            }
             document.getElementById("balance").innerText = balance.toFixed(2);
+        }
+
+        // Llama a esta función cuando el usuario haga clic en el enlace de Adsterra
+        function addBalance() {
+            balance += 0.05; // Incrementa el saldo por clic, puedes cambiar el valor
+            document.getElementById("balance").innerText = balance.toFixed(2);
+
+            // Actualiza el saldo en localStorage
             localStorage.setItem("balance", balance.toFixed(2));
 
-            // Deshabilita el botón de retiro hasta que el saldo vuelva a alcanzar el mínimo
-            document.getElementById("withdraw-button").disabled = true;
-        } else {
-            alert("You don't have enough balance to withdraw.");
+            // Habilita el botón de retiro si el saldo es mayor o igual a $20
+            if (balance >= 20) {
+                document.getElementById("withdraw-button").disabled = false;
+                document.getElementById("withdraw-button").innerText = "Withdraw";
+            }
         }
-    });
 
-    // Inicializa el saldo al cargar la página
-    let balance;
-    initializeBalance();
-</script>
+        // Evento para simular el retiro de dinero
+        document.getElementById("withdraw-button").addEventListener("click", function() {
+            if (balance >= 20) {
+                alert("Withdrawal successful. Balance has been reset.");
+                
+                // Reinicia el saldo en 0 y lo actualiza en localStorage
+                balance = 0.00;
+                document.getElementById("balance").innerText = balance.toFixed(2);
+                localStorage.setItem("balance", balance.toFixed(2));
+
+                // Deshabilita el botón de retiro hasta que el saldo vuelva a alcanzar el mínimo
+                document.getElementById("withdraw-button").disabled = true;
+            } else {
+                alert("You don't have enough balance to withdraw.");
+            }
+        });
+
+        // Inicializa el saldo al cargar la página
+        let balance;
+        initializeBalance();
+    </script>
 
 </body>
+
 </html>
 
